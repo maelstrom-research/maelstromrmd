@@ -1,0 +1,16 @@
+---
+output:
+  html_document:
+    keep_md: true
+  md_document:
+    variant: markdown_github
+---
+
+## R markdown template for Maelstrom Research
+
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_github("maelstrom-research/maelstromrmd")
+```
