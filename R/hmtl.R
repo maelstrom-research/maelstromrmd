@@ -5,6 +5,7 @@
 #' @inheritParams rmarkdown::html_document
 #' @param ... Other arguments to be passed to \code{\link{html_document}} .
 #' @examples library(maelstromrmd)
+#' @export
 maelstromHTML <- function(number_sections = TRUE,
                           fig_width = 7,
                           fig_height = 5,
