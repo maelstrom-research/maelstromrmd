@@ -37,7 +37,13 @@
 
 html { font-size: 15px; }
 
-body { margin: 0;
+p { margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+body { width: 90%;
+       margin-left: auto;
+       margin-right: auto;
        padding: 0;
        font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
        background-color: #fefefe;
@@ -47,10 +53,11 @@ body { margin: 0;
 h1.title { font-weight: 400;
            font-style: normal;
            font-family: 'Roboto Condensed Bold', Arial, Helvetica, sans-serif;
-           margin-top: 4rem;
+           margin-top: 3rem;
            margin-bottom: 1.5rem;
            font-size: 3.2rem;
            line-height: 1;
+           color: #E9B400;
          }
 
 h1 { font-style: normal;
@@ -91,6 +98,7 @@ h4.author, h4.date { font-size: 1.4rem;
                      font-weight: 400;
                      margin: 1rem auto;
                      line-height: 1;
+                     color: #AFB1B2;
                    }
 
 .numeral { font-family: "Roboto Condensed"; }
@@ -111,7 +119,18 @@ img, object, embed {
     max-width: 100%;
 }
 
-p, ol, ul { font-size: 1.4rem; }
+ul { list-style: circle inside; }
+ol { list-style: decimal inside; }
+ol, ul { padding-left: 0;
+         margin-top: 0;
+       }
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+      }
+li { margin-bottom: 1rem; }
 
 em {
     font-style: italic;
@@ -135,3 +154,36 @@ th {
     border-bottom: 1px solid #111;
 }
 
+div.figure {
+         padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+         max-width: 90%;
+         -webkit-margin-start: 0;
+         -webkit-margin-end: 0;
+         margin: 0 0 3em 0;
+}
+
+img {max-width: 100%;}
+
+div.fullwidth, table.fullwidth { max-width: 90%; }
+
+div.fullwidth p.caption {
+  margin-right: 0;
+  max-width: 33%;
+}
+
+.sans { font-family: Roboto, Calibri, sans-serif;
+        letter-spacing: .03em; }
+
+code {  font-family: 'Roboto Mono', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 1.125rem;
+        line-height: 1.6; }
+
+pre code { font-size: 1rem; }
+
+p code { white-space: inherit; }
+
+h1 code, h2 code, h3 code { font-size: 0.80em; }
