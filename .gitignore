@@ -1,0 +1,9 @@
+*~
+.#*
+
+tramp.*
+
+# no R history
+.Rhistory
+
+skeleton.html
