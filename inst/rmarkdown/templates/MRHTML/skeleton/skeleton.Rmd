@@ -3,7 +3,7 @@ title: "Maelstrom template"
 subtitle: "Rmarkdown to HTML"
 author: "John Doe"
 date: "`r Sys.Date()`"
-output: maelstromrmd::maelstromHTML
+output: maelstromrmd::MRHTML
 ---
 
 ```{r setup, include=FALSE}
