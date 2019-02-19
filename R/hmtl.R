@@ -2,6 +2,7 @@
 #'
 #' A template for creating HTML reports with Maelstrom look and feel.
 #'
+#' @inheritParams rmarkdown::html_document
 #' @param ... Other arguments to be passed to \code{\link{html_document}} .
 #' @examples library(maelstromrmd)
 maelstromHTML <- function(number_sections = TRUE,
