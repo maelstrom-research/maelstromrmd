@@ -1,0 +1,35 @@
+---
+title: "Maelstrom template"
+subtitle: "Rmarkdown to HTML"
+author: "John Doe"
+date: "`r Sys.Date()`"
+output: maelstromrmd::maelstromHTML
+---
+
+```{r setup, include=FALSE}
+library(maelstromrmd)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('maelstromrmd'))
+options(htmltools.dir.version = FALSE)
+```
+
+# Headings
+
+Maelstrom style provides first and second-level headings.
+You may get unexpected output if you try to use `###` and smaller headings.
+
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(wt, mpg)) +
+    geom_point(size = 3, aes(colour = factor(cyl))) +
+    theme(legend.position = "none")
+```
+
+# Tables
+
+You can use the `kable()` function from the **knitr** package to format tables.
+
+```{r}
+knitr::kable(mtcars[1:6, 1:6], caption = 'A subset of mtcars.')
+```

@@ -1,12 +1,19 @@
 Package: maelstromrmd
-Title: What the Package Does (One Line, Title Case)
+Title: Maelstrom template for Rmd files
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
+Authors@R:
+    person(given = "Denis",
+           family = "Haine",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "dhaine@maelstrom-research.org")
+BugReports: https://github.com/maelstrom-research/maelstromrmd/issues
+Description: Provides a Maesltrom template for Opal report.
+Depends: R (>= 3.5.0)
+License: MIT
 Encoding: UTF-8
+Imports:
+        knitr,
+        rmarkdown,
+        htmltools
 LazyData: true
+RoxygenNote: 6.1.1

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Roboto";
+    src: url("font/roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("font/roboto/RobotoMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("font/roboto/RobotoCondensed-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed Bold";
+    src: url("font/roboto/RobotoCondensed-Bold.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed Italic";
+    src: url("font/roboto/RobotoCondensed-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+html { font-size: 15px; }
+
+body { margin: 0;
+       padding: 0;
+       font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+       background-color: #fefefe;
+       color: #222;
+     }
+
+h1.title { font-weight: 400;
+           font-style: normal;
+           font-family: 'Roboto Condensed Bold', Arial, Helvetica, sans-serif;
+           margin-top: 4rem;
+           margin-bottom: 1.5rem;
+           font-size: 3.2rem;
+           line-height: 1;
+         }
+
+h1 { font-style: normal;
+     font-weight: 400;
+     font-family: 'Roboto Condensed Bold', Arial, Helvetica, sans-serif;
+     margin-top: 2.1rem;
+     margin-bottom: 0;
+     font-size: 2.2rem;
+     line-height: 1;
+   }
+
+h2 { font-style: normal;
+     font-weight: 400;
+     font-size: 1.7rem;
+     margin-top: 2rem;
+     margin-bottom: 0;
+     line-height: 1;
+   }
+
+h3.subtitle { font-style: normal;
+              font-weight: 400;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              font-size: 1.8rem;
+              display: block;
+              line-height: 1;
+            }
+
+h4 { font-style: normal;
+     font-weight: 400;
+     font-size: 1.4rem;
+     margin-top: 1.5rem;
+     margin-bottom: 0;
+     line-height: 1; 
+   }
+
+h4.author, h4.date { font-size: 1.4rem;
+                     font-weight: 400;
+                     margin: 1rem auto;
+                     line-height: 1;
+                   }
+
+.numeral { font-family: "Roboto Condensed"; }
+
+.danger { color: red; }
+
+article, aside, figure, footer, header, nav, section, details, summary {
+    display: block;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img, object, embed {
+    max-width: 100%;
+}
+
+p, ol, ul { font-size: 1.4rem; }
+
+em {
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Roboto Condensed Italic";
+}
+
+strong {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Roboto Condensed Bold";
+}
+
+table {
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+    font-size: 1.1rem;
+}
+
+th {
+    border-bottom: 1px solid #111;
+}
+
