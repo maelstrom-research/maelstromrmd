@@ -13,6 +13,12 @@ knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('maelstromrmd')
 options(htmltools.dir.version = FALSE)
 ```
 
+This is a [Maelstrom](https://www.maelstrom-research.org/) template for Opal
+reports.
+
+You can have _italic_ and **bold** text, and `code` snippets.
+
+
 # Headings
 
 Maelstrom style provides first and second-level headings.
