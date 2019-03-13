@@ -16,7 +16,7 @@ MRHTML <- function(number_sections = TRUE,
                    toc_depth = 2,
                    smart = TRUE,
                    self_contained = TRUE,
-                   highlight = "default",
+                   highlight = "tango",
                    mathjax = "default",
                    css = NULL,
                    includes = NULL,
@@ -24,31 +24,46 @@ MRHTML <- function(number_sections = TRUE,
                    lib_dir = NULL,
                    md_extensions = NULL,
                    pandoc_args = NULL,
-                   extra_dependencies = NULL,
                    ...) {
 
-    dep <- list(htmltools::htmlDependency("maelstrom", "0.0.900",
-                                          system.file("rmarkdown", "templates",
-                                                      "MRHTML",
-                                                      "resources",
-                                                      package = "maelstromrmd"),
-                                          stylesheet = "maelstromrmd.css"))
+    extra_dependencies <- list(rmarkdown::html_dependency_jquery(),
+                               rmarkdown::html_dependency_jqueryui(),
+                               html_dependency_navigation(),
+                               html_dependency_bootstrap("bootstrap"),
+                               html_dependency_magnific_popup(),
+                               html_dependency_mr())
 
-    rmarkdown::html_document(
-                   number_sections = number_sections,
-                   fig_width = fig_width,
-                   fig_height = fig_height,
-                   fig_retina = fig_retina,
-                   fig_caption = fig_caption,
-                   dev = dev,
-                   toc = toc,
-                   toc_depth = toc_depth,
-                   smart = smart,
-                   self_contained = self_contained,
-                   highlight = highlight,
-                   theme = NULL,
-                   mathjax = mathjax,
-                   pandoc_args = pandoc_args,
-                   extra_dependencies = dep
-               )
+    extra_args <- list(...)
+    if ("extra_dependencies" %in% names(extra_args)) {
+        extra_dependencies <- append(extra_dependencies,
+                                     extra_args[["extra_dependencies"]])
+        extra_args[["extra_dependencies"]] <- NULL
+        extra_args[["mathjax"]] <- NULL
+    }
+
+    html_document_args <- list(
+        template = system.file("templates/MRHTML/MRHTML.html",
+                               package = "maelstromrmd"),
+        extra_dependencies = extra_dependencies,
+        fig_width = fig_width,
+        fig_height = fig_height,
+        fig_caption = fig_caption,
+        highlight = highlight,
+        toc = toc,
+        toc_depth = toc_depth
+    )
+    html_document_args <- append(html_document_args, extra_args)
+    html_document_func <- rmarkdown::html_document
+
+    do.call(html_document_func, html_document_args)
+
+}
+
+html_dependency_mr <- function() {
+    htmltools::htmlDependency("maelstrom",
+                              "0.0.990",
+                              system.file("templates/MRHTML",
+                                          package = "maelstromrmd"),
+                              script = "mr.js",
+                              stylesheet = "mr.css")
 }

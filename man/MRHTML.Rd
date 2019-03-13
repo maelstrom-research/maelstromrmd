@@ -7,10 +7,9 @@
 MRHTML(number_sections = TRUE, fig_width = 7, fig_height = 5,
   fig_retina = if (!fig_caption) 2, fig_caption = FALSE, dev = "png",
   toc = TRUE, toc_depth = 2, smart = TRUE, self_contained = TRUE,
-  highlight = "default", mathjax = "default", css = NULL,
+  highlight = "tango", mathjax = "default", css = NULL,
   includes = NULL, keep_md = FALSE, lib_dir = NULL,
-  md_extensions = NULL, pandoc_args = NULL,
-  extra_dependencies = NULL, ...)
+  md_extensions = NULL, pandoc_args = NULL, ...)
 }
 \arguments{
 \item{number_sections}{\code{TRUE} to number section headings}
@@ -68,9 +67,6 @@ default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
 additional details.}
 
 \item{pandoc_args}{Additional command line options to pass to pandoc}
-
-\item{extra_dependencies}{Additional function arguments to pass to the
-base R Markdown HTML output formatter \code{\link{html_document_base}}}
 
 \item{...}{Other arguments to be passed to \code{\link{html_document}} .}
 }
