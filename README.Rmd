@@ -14,6 +14,12 @@ output:
 devtools::install_github("maelstrom-research/maelstromrmd")
 ```
 
+Or the "other version", `hidden_code`, based on `rmdformats`:
+
+```{r eval=FALSE}
+devtools::install_github("maelstrom-research/maelstromrmd", ref = "hidden_code")
+```
+
 ### Use
 
 Get an HTML from your Rmd document by specifying the following `output`
